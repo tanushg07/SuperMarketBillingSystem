@@ -392,7 +392,7 @@
     <div class="stats-bar">
       <div class="stat-card">
         <div class="stat-label">Total Products</div>
-        <div class="stat-value" id="st-products">14</div>
+        <div class="stat-value" id="st-products">0</div>
         <div class="stat-sub">Across 3 categories</div>
       </div>
       <div class="stat-card">
@@ -705,6 +705,7 @@ function setCategory(el) {
 }
 
 function updateStats() {
+  document.getElementById('st-products').textContent = PRODUCTS.length;
   document.getElementById('st-bills').textContent = billsGenerated;
   document.getElementById('st-revenue').textContent = '₹' + Math.round(totalRevenue).toLocaleString('en-IN');
   document.getElementById('st-cart').textContent = cart.reduce((s,i)=>s+i.qty,0);
@@ -729,6 +730,7 @@ function scrollToCart() { document.querySelector('.sidebar').scrollIntoView({ be
 // INIT
 renderProducts();
 renderCart();
+updateStats();
 </script>
 </body>
 </html>

@@ -78,14 +78,14 @@ Just open `frontend/index.html` in any modern browser — no server needed!
 
 ## ✨ Frontend Features
 
-- 🛍️ **Product catalog** with search + category filter
+- 🛍️ **Expanded product catalog** with search + category filter
 - 🛒 **Live shopping cart** with quantity controls
 - 👤 **Customer details** with membership toggle (5% member discount)
 - 💳 **Payment methods** — UPI, Card, Cash
 - 🧾 **Printable receipt** modal with full GST breakdown
 - 📊 **Live stats bar** — total revenue, bills, cart count
 - 📦 **Stock management** — low stock warnings, out-of-stock blocking
-- 🎨 **OOP reference panel** — shows concepts used with class names
+- 🧱 **Clean UI layout** focused on catalog, cart, billing, and receipt flow
 
 ---
 
