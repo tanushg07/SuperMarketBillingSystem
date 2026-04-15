@@ -321,20 +321,6 @@
   .toast.warning { background: var(--amber); }
   @keyframes slideIn { from { transform: translateX(60px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
 
-  /* ── OOP PANEL ── */
-  .oop-panel { margin-top: 2rem; }
-  .oop-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 0.75rem; }
-  .oop-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 0.85rem;
-    border-left: 3px solid var(--green);
-  }
-  .oop-concept { font-family: 'Syne', sans-serif; font-size: 0.75rem; font-weight: 700; color: var(--green); text-transform: uppercase; letter-spacing: 0.08em; }
-  .oop-class { font-size: 0.82rem; font-weight: 600; color: var(--text); margin: 0.2rem 0; }
-  .oop-desc { font-size: 0.72rem; color: var(--muted); line-height: 1.4; }
-
   @media (max-width: 768px) {
     .app { grid-template-columns: 1fr; }
     .sidebar { position: relative; top: 0; height: auto; }
@@ -442,52 +428,6 @@
     <div class="section-title" id="section-title">All Products</div>
     <div class="product-grid" id="product-grid"></div>
 
-    <!-- OOP Reference Panel -->
-    <div class="oop-panel">
-      <div class="section-title" style="margin-top:2rem;">OOP Concepts Used in This System</div>
-      <div class="oop-grid">
-        <div class="oop-card">
-          <div class="oop-concept">Encapsulation</div>
-          <div class="oop-class">Product, Customer, CartItem</div>
-          <div class="oop-desc">Private fields with public getters/setters. State is hidden and accessed via methods only.</div>
-        </div>
-        <div class="oop-card">
-          <div class="oop-concept">Inheritance</div>
-          <div class="oop-class">GroceryProduct, DairyProduct, ElectronicsProduct</div>
-          <div class="oop-desc">All extend abstract Product. MemberCustomer extends Customer. Payment subclasses extend PaymentMethod.</div>
-        </div>
-        <div class="oop-card">
-          <div class="oop-concept">Polymorphism</div>
-          <div class="oop-class">calculateDiscount(), processPayment()</div>
-          <div class="oop-desc">Each product type overrides calculateDiscount() uniquely. Each payment type overrides processPayment().</div>
-        </div>
-        <div class="oop-card">
-          <div class="oop-concept">Abstraction</div>
-          <div class="oop-class">abstract Product, abstract PaymentMethod</div>
-          <div class="oop-desc">Abstract classes define the contract; concrete subclasses provide the implementation.</div>
-        </div>
-        <div class="oop-card">
-          <div class="oop-concept">Interface</div>
-          <div class="oop-class">Taxable, Discountable</div>
-          <div class="oop-desc">CartItem implements Taxable. Customer implements Discountable. Multiple interface support.</div>
-        </div>
-        <div class="oop-card">
-          <div class="oop-concept">Singleton</div>
-          <div class="oop-class">InventoryService</div>
-          <div class="oop-desc">Only one inventory instance in the entire JVM. Thread-safe getInstance() with lazy initialization.</div>
-        </div>
-        <div class="oop-card">
-          <div class="oop-concept">Exception Handling</div>
-          <div class="oop-class">Custom checked exceptions</div>
-          <div class="oop-desc">ProductNotFoundException, OutOfStockException, EmptyCartException, PaymentFailedException.</div>
-        </div>
-        <div class="oop-card">
-          <div class="oop-concept">Static Factory</div>
-          <div class="oop-class">PaymentMethod.of(type)</div>
-          <div class="oop-desc">Static factory method creates correct PaymentMethod subclass at runtime based on string input.</div>
-        </div>
-      </div>
-    </div>
   </main>
 </div>
 

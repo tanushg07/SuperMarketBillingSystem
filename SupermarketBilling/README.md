@@ -62,9 +62,10 @@ SupermarketBilling/
 ## 🚀 How to Run
 
 ### Backend (Java)
-```bash
+```powershell
 # Compile
-javac -d out src/main/java/com/supermarket/**/*.java src/main/java/com/supermarket/*.java
+$sources = Get-ChildItem -Path src/main/java -Recurse -Filter *.java | ForEach-Object FullName
+javac -d out $sources
 
 # Run
 java -cp out com.supermarket.Main
